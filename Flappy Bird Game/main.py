@@ -1,4 +1,5 @@
 #agar ap convert alpha pixels ke alpha bhi change honge aur agar sirf convert ka istemal karoge to image ke pixals change for blitting 
+#agar ap convert alpha pixels ke alpha bhi change honge aur agar sirf convert ka istemal karoge to image ke pixals change for blitting 
 import random # For generating random numbers
 import sys # We will use sys.exit to exit the program
 import pygame
@@ -12,9 +13,9 @@ SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 GROUNDY = SCREENHEIGHT * 0.8
 GAME_SPRITES = {}
 GAME_SOUNDS = {}
-PLAYER = 'gallery/sprites/bird.png'
-BACKGROUND = 'gallery/sprites/background.png'
-PIPE = 'gallery/sprites/pipe.png'
+PLAYER = 'gallary/sprites/bird.png'
+BACKGROUND = 'gallary/sprites/background.png'
+PIPE = 'gallary/sprites/pipe.png'
 
 def welcomeScreen():
     """
@@ -189,30 +190,30 @@ if __name__ == "__main__":
     FPSCLOCK = pygame.time.Clock()
     pygame.display.set_caption('Flappy Bird ')#convert alpha is used for faster blitting of the image
     GAME_SPRITES['numbers'] = ( 
-        pygame.image.load('gallery/sprites/0.png').convert_alpha(), 
-        pygame.image.load('gallery/sprites/1.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/2.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/3.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/4.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/5.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/6.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/7.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/8.png').convert_alpha(),
-        pygame.image.load('gallery/sprites/9.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/0.png').convert_alpha(), 
+        pygame.image.load('gallary/sprites/1.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/2.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/3.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/4.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/5.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/6.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/7.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/8.png').convert_alpha(),
+        pygame.image.load('gallary/sprites/9.png').convert_alpha(),
     )
 
-    GAME_SPRITES['message'] =pygame.image.load('gallery/sprites/message.png').convert_alpha()
-    GAME_SPRITES['base'] =pygame.image.load('gallery/sprites/base.png').convert_alpha()
+    GAME_SPRITES['message'] =pygame.image.load('gallary/sprites/message.png').convert_alpha()
+    GAME_SPRITES['base'] =pygame.image.load('gallary/sprites/base.png').convert_alpha()
     GAME_SPRITES['pipe'] =(pygame.transform.rotate(pygame.image.load( PIPE).convert_alpha(), 180), 
     pygame.image.load(PIPE).convert_alpha()
     )
 
     # Game sounds
-    GAME_SOUNDS['die'] = pygame.mixer.Sound('gallery/audio/die.wav')
-    GAME_SOUNDS['hit'] = pygame.mixer.Sound('gallery/audio/hit.wav')
-    GAME_SOUNDS['point'] = pygame.mixer.Sound('gallery/audio/point.wav')
-    GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('gallery/audio/swoosh.wav')
-    GAME_SOUNDS['wing'] = pygame.mixer.Sound('gallery/audio/wing.wav')
+    GAME_SOUNDS['die'] = pygame.mixer.Sound('gallary/audio/die.wav')
+    GAME_SOUNDS['hit'] = pygame.mixer.Sound('gallary/audio/hit.wav')
+    GAME_SOUNDS['point'] = pygame.mixer.Sound('gallary/audio/point.wav')
+    GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('gallary/audio/swoosh.wav')
+    GAME_SOUNDS['wing'] = pygame.mixer.Sound('gallary/audio/wing.wav')
 
     GAME_SPRITES['background'] = pygame.image.load(BACKGROUND).convert()
     GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
